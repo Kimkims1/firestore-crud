@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         firestoreDB = FirebaseFirestore.getInstance();
 
         loadNotesList();
-
+/*
         firestoreListener = firestoreDB.collection("notes")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
@@ -64,15 +64,15 @@ public class MainActivity extends AppCompatActivity {
                         mAdapter = new NoteRecyclerViewAdapter(notesList, getApplicationContext(), firestoreDB);
                         recyclerView.setAdapter(mAdapter);
                     }
-                });
+                });*/
     }
 
-    @Override
+   /* @Override
     protected void onDestroy() {
         super.onDestroy();
 
         firestoreListener.remove();
-    }
+    }*/
 
     private void loadNotesList() {
         firestoreDB.collection("notes")
